@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body id="body">
+    <div class="container col-8 my-5" id="container">
+        <h1 class=" text-center pt-4">Give Your Details Here!</h1>
+        <form  onsubmit="submitform(event)">
+            <div class="mb-3 text-center">
+               <img src="images/user_149071.png" alt="" id="profile-img">
+               <input type="file" accept="image/jpeg , image/png, imagre/jpg" id="input-file">
+            <label for="input-file" id="profile-label">Update Image</label>
+              </div>
+            <div class="mb-3 feild">
+              <label for="exampleName1" class="form-label">Name</label>
+              <input type="text" class="form-control" id="exampleName1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 feild">
+              <label for="exampleInputPhone1" class="form-label">Phone</label>
+              <input type="number" class="form-control " id="exampleInputPhone1">
+            </div>
+            <div class="mb-3 feild">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1">
+              </div>
+              <div class="mb-3 feild">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="d-flex justify-content-center">
+
+                   <button type="submit" class="btn submit my-3">Submit</button>
+        </div>
+          </form>
+    </div>
+    
+      <script src="index.js"></script>
+      <script>
+        
+// Update Profile Image
+inputFile.onchange = ()=>{
+    profileImg.src = URL.createObjectURL(inputFile.files[0]); 
+}
+
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

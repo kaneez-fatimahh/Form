@@ -1,0 +1,49 @@
+#profile-img{
+max-width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#input-file{
+   display: none; 
+}
+#profile-label{
+    background-color: #1a1b26!important;
+    color: #eecd90;
+    display: block;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+}
+body{
+    background-color: #1f2537!important;
+    color :white;
+}
+#container{
+    background-color: #02020e;
+    color: #eecd90;
+    border-radius: 20px;
+}
+
+.form-control{
+    max-width: 300px!important;
+    background-color: #1a1b26!important;
+    color: white!important;
+   
+}
+.feild{
+    max-width: 300px!important;
+    margin: auto;
+}
+.submit{
+    background-color: #1a1b26!important;
+    outline-color: #1a1b26!important;
+    color: #eecd90!important;
+   
+}
+.btn{
+    text-align: center;
+}
