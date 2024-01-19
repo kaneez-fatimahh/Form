@@ -1,49 +1,60 @@
-#profile-img{
-max-width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+#profile-img {
+  max-width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-#input-file{
-   display: none; 
+#input-file {
+  display: none;
 }
-#profile-label{
-    background-color: #1a1b26!important;
-    color: #eecd90;
-    display: block;
-    width: 150px;
-    padding: 10px;
-    text-align: center;
-    margin: auto;
-    border-radius: 10px;
+#profile-label {
+  background-color: #1a1b26 !important;
+  color: #eecd90;
+  display: block;
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
 }
-body{
-    background-color: #1f2537!important;
-    color :white;
+body {
+  background-color: #1f2537 !important;
+  color: white;
 }
-#container{
-    background-color: #02020e;
-    color: #eecd90;
-    border-radius: 20px;
+#container {
+  background-color: #02020e;
+  color: #eecd90;
+  border-radius: 20px;
 }
 
-.form-control{
-    max-width: 300px!important;
-    background-color: #1a1b26!important;
-    color: white!important;
-   
+.form-control {
+  max-width: 300px !important;
+  background-color: #1a1b26 !important;
+  color: white !important;
 }
-.feild{
-    max-width: 300px!important;
-    margin: auto;
+.feild {
+  max-width: 300px !important;
+  margin: auto;
 }
-.submit{
-    background-color: #1a1b26!important;
-    outline-color: #1a1b26!important;
-    color: #eecd90!important;
-   
+.submit {
+  background-color: #1a1b26 !important;
+  outline-color: #1a1b26 !important;
+  color: #eecd90 !important;
 }
-.btn{
-    text-align: center;
+.btn {
+  text-align: center;
+}
+.card {
+  background-color: #02020e !important;
+  color: #eecd90 !important;
+  text-align: start !important;
+  box-shadow: -15px 15px 20px #02020e;
+}
+.cards {
+  transition: all 0.4s;
+}
+.cards:hover {
+  transform: scale(1.10);
+  margin-bottom: 40px;
 }
