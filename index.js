@@ -6,6 +6,14 @@ let phone = document.getElementById("exampleInputPhone1");
 let email = document.getElementById("exampleInputEmail1");
 let password = document.getElementById("exampleInputPassword1");
 let container = document.getElementById("container");
+//modal inputs
+let modalName = document.getElementById("modalname");
+let modalPhone = document.getElementById("modalphone");
+let modalEmail = document.getElementById("modalemail");
+let modalPassword = document.getElementById("modalpassword");
+let modalImg = document.getElementById("modalpassword");
+let container2 = document.getElementById("con2");
+
 
 // Empty All Feilds
 const emptyFeilds = () => {
@@ -34,22 +42,76 @@ const display = () => {
   let getdata = JSON.parse(localStorage.getItem("formData"));
   console.log(getdata);
   let obtain = getdata;
-  obtain.forEach((element) => {
+  obtain.forEach((element,index) => {
     let card = document.createElement("div");
     card.classList.add("col-lg-4", "col-md-6", "col-sm-12", "mb-5", "mt-3");
     card.classList.add("cards");
+    card.dataset.index = index;
     card.innerHTML += ` <div class="card m-auto" style="width: 16rem;">
 <img src="${element[4]}" class="card-img-top" alt="...">
   <h6 class=" px-2 mt-2">Name : ${element[0]}</h6>
   <h6 class="card-text mb-2 px-2 ">Phone : ${element[1]}</h6>
   <h6 class="card-text  px-2">Email : ${element[2]}</h6>
   <h6  class="card-text  px-2 mb-2" >Password : ${element[3]}</h6>
-</div>
+  <div class="row">
+  <div class="col-6 mb-2 text-end"> 
+  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="update(${index})">Update</button>
+  </div>
+  <div class="col-6">
+  <button type="button" class="btn btn-outline-danger" onclick="del(event,${index})">Delete</button>
+  </div>
+  </div>
+
+
 </div>  `;
     container2.appendChild(card);
   });
 };
+//del function
+const del =(e,index)=>{
+  let getdata = JSON.parse(localStorage.getItem("formData"));
+  let obtain= getdata;
+  obtain.splice(index , 1);
+  localStorage.setItem("formData", JSON.stringify(obtain));
+  e.target.parentElement.parentElement.parentElement.parentElement.remove()
+  console.log("dell")
+}
+//update function
+let getdata = JSON.parse(localStorage.getItem("formData"));
 
+const update = (index)=>{
+  console.log("update")
+
+
+ let modalinput = getdata[index]
+ modalName.value = modalinput[0];
+ modalPhone.value = modalinput[1];
+ modalEmail.value = modalinput[2];
+ modalPassword.value = modalinput[3];
+//modalName.value = document.getElementById("exampleName1").value
+
+}
+
+
+//save changes
+const saveChanges = (e)=>{
+  let index1 = document.querySelector('.cards[data-index]').dataset.index;
+console.log(e.target.index)
+  if (e.index == index1) {
+    console.log("equal");
+  }
+  const formData = [modalName.value, modalPhone.value, modalEmail.value, modalPassword.value];
+  saveFormData(formData);
+   modalName.value = name;
+
+  console.log("save");
+};
+
+
+
+
+  
+  
 let submitform = (e) => {
   if (
     name.value == "" ||

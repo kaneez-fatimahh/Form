@@ -16,6 +16,58 @@
     <div class="row text-center" id="container2">
     </div>
   </div>
+  <!-- modal -->
+  <div class="container " id="con2">
+  <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+      
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body">
+       <form >
+         <div class="mb-3 text-center">
+           <img src="images/user_149071.png" alt="" id="profile-img">
+           <input type="file" accept="image/jpeg , image/png, imagre/jpg" id="input-file">
+           <label for="input-file" id="profile-label">Update Image</label>
+         </div>
+         <div class="mb-3 feild" id="username">
+           <label for="modalname" class="form-label">Name</label>
+           <input type="text" class="form-control" id="modalname" aria-describedby="emailHelp">
+         </div>
+         <div class="mb-3 feild">
+           <label for="modalphone" class="form-label">Phone</label>
+           <input type="number" class="form-control " id="modalphone">
+         </div>
+         <div class="mb-3 feild">
+           <label for="modalemail" class="form-label">Email address</label>
+           <input type="email" class="form-control" id="modalemail">
+         </div>
+         <div class="mb-3 feild">
+           <label for="modalpassword" class="form-label">Password</label>
+           <input type="password" class="form-control" id="modalpassword">
+         </div>
+          <div class="d-flex justify-content-center">
+   
+           <button type="submit" class="btn submit my-3">Submit</button>
+         </div> 
+       </form>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" onclick="saveChanges(event)">Save changes</button>
+     </div>
+   </div>
+ </div>
+</div>
+  </div>
 </body>
 <script src="index.js"></script>
 <script>
