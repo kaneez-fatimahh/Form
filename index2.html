@@ -32,12 +32,7 @@
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
      </div>
      <div class="modal-body">
-       <form >
-         <div class="mb-3 text-center">
-           <img src="images/user_149071.png" alt="" id="profile-img">
-           <input type="file" accept="image/jpeg , image/png, imagre/jpg" id="input-file">
-           <label for="input-file" id="profile-label">Update Image</label>
-         </div>
+       <form>
          <div class="mb-3 feild" id="username">
            <label for="modalname" class="form-label">Name</label>
            <input type="text" class="form-control" id="modalname" aria-describedby="emailHelp">
@@ -54,10 +49,9 @@
            <label for="modalpassword" class="form-label">Password</label>
            <input type="password" class="form-control" id="modalpassword">
          </div>
-          <div class="d-flex justify-content-center">
-   
-           <button type="submit" class="btn submit my-3">Submit</button>
-         </div> 
+         <div class="d-none">
+          <input type="number" class="form-control" id="entityIndex">
+        </div>
        </form>
      </div>
      <div class="modal-footer">

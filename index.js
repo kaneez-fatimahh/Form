@@ -13,6 +13,8 @@ let modalEmail = document.getElementById("modalemail");
 let modalPassword = document.getElementById("modalpassword");
 let modalImg = document.getElementById("modalpassword");
 let container2 = document.getElementById("con2");
+let entityIndex = document.getElementById("entityIndex");
+
 
 
 // Empty All Feilds
@@ -84,29 +86,38 @@ const update = (index)=>{
 
 
  let modalinput = getdata[index]
- modalName.value = modalinput[0];
+ entityIndex.value = index;
+  modalName.value = modalinput[0];
  modalPhone.value = modalinput[1];
  modalEmail.value = modalinput[2];
  modalPassword.value = modalinput[3];
+
 //modalName.value = document.getElementById("exampleName1").value
 
 }
 
+const saveChanges = (e) => {
+  e.preventDefault();
 
-//save changes
-const saveChanges = (e)=>{
-  let index1 = document.querySelector('.cards[data-index]').dataset.index;
-console.log(e.target.index)
-  if (e.index == index1) {
-    console.log("equal");
+  let getEntityIndex = document.querySelector('#entityIndex').value;
+  let getdataForUpdate = JSON.parse(localStorage.getItem("formData"));
+
+  const filterDataforUpdate = getdataForUpdate.filter((item, index) => index === parseInt(getEntityIndex));
+
+  if (filterDataforUpdate.length > 0) {
+    const updatedEntity = filterDataforUpdate[0]; 
+    updatedEntity[0] = document.getElementById("modalname").value;
+    updatedEntity[1] = document.getElementById("modalphone").value;
+    updatedEntity[2] = document.getElementById("modalemail").value;
+    updatedEntity[3] = document.getElementById("modalpassword").value;
+
+    localStorage.setItem("formData", JSON.stringify(getdataForUpdate));
+    location.reload();
+
+  } else {
+    console.error("nooo");
   }
-  const formData = [modalName.value, modalPhone.value, modalEmail.value, modalPassword.value];
-  saveFormData(formData);
-   modalName.value = name;
-
-  console.log("save");
 };
-
 
 
 
